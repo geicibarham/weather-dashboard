@@ -1,12 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Document</title>
 </head>
+
+<header>
+    <nav>
+
+        <h1>Weather Dashboard</h1>
+
+    </nav>
+
+</header>
+
 <body>
-    
+
+    <main class="flex-row justify-space-between">
+        <div class="mycard">
+            <div class="col-12 col-md-4">
+                <div class="card">
+                    <h3 class="card-header">City</h3>
+                    <form id="city-form" class="card-body">
+                        <input name="city" id="city-input" type="text" autofocus="true" class="form-input"
+                            placeholder="Enter city here" />
+                        <button type="submit" class="btn btn btn-outline-primary">Search</button>
+                    </form>
+
+
+
+
+                    <div class="col-12 col-md-8"></div>
+                </div>
+
+
+
+                <div class="col-12 col-md-8">
+                    <span id="current-date" class="current-date">
+
+                    </span>
+
+
+                </div>
+    </main>
+
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+
+
+
 </body>
+
 </html>

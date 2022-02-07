@@ -1,0 +1,43 @@
+var formEl = document.querySelector("#city-form");
+var cityInputEl = document.querySelector("#city-input");
+
+
+
+
+
+//var for current date to display on page
+var currentDate = moment().format('L');
+$("#current-date").text("(" + currentDate + ")");
+
+
+//function to handle form submission
+var formSubmitHandler = function (event) {
+    //prevent browser from automatically refreshing
+    event.preventDefault();
+
+    //get city from input element
+}
+
+//create function to get the current weather on a specific city - fetch will be in here
+
+var getCurrentWeather = function () {
+
+    var apiKey = "3460f41b14b0c70a075e27fa43af2bb2";
+
+    var apiUrl = 'http://api.openweathermap.org/geo/1.0/direct?q={london},&limit={limit}&appid={ApiKey}';
+
+    fetch(apiUrl)
+        .then(function (response) {
+            console.log(response);
+        });
+}
+
+getCurrentWeather();
+
+
+
+
+
+// var getFivedaysWeather = function () {
+
+
