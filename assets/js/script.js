@@ -22,15 +22,17 @@ var formSubmitHandler = function (event) {
 
 var getCurrentWeather = function () {
 
-    var apiKey = "3460f41b14b0c70a075e27fa43af2bb2";
-
-    var apiUrl = 'http://api.openweathermap.org/geo/1.0/direct?q={london},&limit={limit}&appid={ApiKey}';
-
-    fetch(apiUrl)
+    var ApiKey = "3460f41b14b0c70a075e27fa43af2bb2";
+    
+    var apiUrl = `http://api.openweathermap.org/geo/1.0/direct?q={london},&limit={limit}&appid={3460f41b14b0c70a075e27fa43af2bb2}`;
+console.log(apiUrl);
+   
+fetch(apiUrl)
         .then(function (response) {
-            console.log(response);
+            // console.log(response);
         });
 }
+
 
 getCurrentWeather();
 
