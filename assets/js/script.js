@@ -22,24 +22,21 @@ var formSubmitHandler = function (event) {
 
 var getCurrentWeather = function () {
 
-    var ApiKey = "ee601a5be4293bbbbc2b2665840ba5952";
-    
-    var apiUrl = `http://api.openweathermap.org/geo/1.0/direct?q=London&limit=5&appid={ApiKey}`;
-console.log(apiUrl);
-   
-fetch(apiUrl)
+    var ApiKey = "ee601a5be4293bbbbc2b2665840ba595";
+
+    var apiUrl = `http://api.openweathermap.org/geo/1.0/direct?q={durham},&appid=${ApiKey}`
+  
+    fetch(apiUrl)
         .then(function (response) {
-            // console.log(response);
-        });
-}
-
-
-getCurrentWeather();
-
+            response.json().then(function (response) {
+                console.log(response);
+            });
+        })
 
 
 
+    }
+
+    getCurrentWeather();
 
 // var getFivedaysWeather = function () {
-
-
