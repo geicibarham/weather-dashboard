@@ -29,13 +29,13 @@ var getCurrentWeather = function () {
 
 
     //this api returns latitude and longitute
-    var apiUrl = "api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid=${apiKey}";
+    var apiUrl = `http://api.openweathermap.org/geo/1.0/direct?q={durham}&limit={limit}&appid=${apiKey}`;
 
 
     fetch(apiUrl)
         .then(function (response) {
             //api that converts latitude and longitute into city name
-            fetch("http://api.openweathermap.org/geo/1.0/direct?q={durham}&appid=${apiKey}")
+
             response.json().then(function (response) {
                 console.log(response);
             });
