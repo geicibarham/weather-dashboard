@@ -22,9 +22,9 @@ var formSubmitHandler = function (event) {
 
 var getCurrentWeather = function () {
 
-    var ApiKey = "3460f41b14b0c70a075e27fa43af2bb2";
+    var ApiKey = "ee601a5be4293bbbbc2b2665840ba5952";
     
-    var apiUrl = `http://api.openweathermap.org/geo/1.0/direct?q={london},&limit={limit}&appid={3460f41b14b0c70a075e27fa43af2bb2}`;
+    var apiUrl = `http://api.openweathermap.org/geo/1.0/direct?q=London&limit=5&appid={ApiKey}`;
 console.log(apiUrl);
    
 fetch(apiUrl)
