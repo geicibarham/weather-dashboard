@@ -1,7 +1,6 @@
 var formEl = document.querySelector("#city-form");
 var cityInputEl = document.querySelector("#city-input");
-var currentWeather = document.querySelector("#current-weather-container");
-var searchButtonEl = document.querySelector("#search-button");
+var weatherContainerEl = document.querySelector("#current-weather-container");
 
 
 
@@ -25,17 +24,15 @@ var formSubmitHandler = function (event) {
 
 var getCurrentWeather = function () {
 
-    var apiKey = "ee601a5be4293bbbbc2b2665840ba595";
+    var ApiKey = "ee601a5be4293bbbbc2b2665840ba595";
 
+    var apiUrl = `http://api.openweathermap.org/geo/1.0/direct?q={durham}&appid=${ApiKey}`
 
-    //this api returns latitude and longitute
-    var apiUrl = `http://api.openweathermap.org/geo/1.0/direct?q={durham}&limit={limit}&appid=${apiKey}`;
+    var apiUrlat = `api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid=${ApiKey}`
 
-
+  
     fetch(apiUrl)
         .then(function (response) {
-            //api that converts latitude and longitute into city name
-
             response.json().then(function (response) {
                 console.log(response);
             });
@@ -43,11 +40,8 @@ var getCurrentWeather = function () {
 
 
 
-}
+    }
 
-getCurrentWeather();
+    getCurrentWeather();
 
 // var getFivedaysWeather = function () {
-
-//add event listeners to execute function
-// searchButtonEl.addEventListener('click', getCurrentWeather);
