@@ -19,12 +19,12 @@ var formSubmitHandler = function (event) {
 //create function to get the current weather on a specific city - fetch will be in here
 
 var getCurrentWeather = function () {
-
+    
 
     var ApiKey = 'ee601a5be4293bbbbc2b2665840ba595';
     var searchInput = $("#city-input").value;
 
-    var apiUrl = 'https://api.openweathermap.org/data/2.5/weather?q=' + searchInput + "&Appid=" + ApiKey + "&units=imperial";
+    var apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + searchInput + "&Appid=" + ApiKey + "&units=imperial";
 
     // https://api.openweathermap.org/data/2.5/weather?q=curitiba&appid=ee601a5be4293bbbbc2b2665840ba595&units=imperial
     // var apiUrl = 'https://api.openweathermap.org/data/2.5/weather?q' + cityInput.value + '&appid=ee601a5be4293bbbbc2b2665840ba595' + '&units=imperial';
@@ -40,10 +40,9 @@ var getCurrentWeather = function () {
         })
 
 
-
 }
 
-getCurrentWeather();
+// getCurrentWeather();
 
 formEl.addEventListener('submit', getCurrentWeather);
 
