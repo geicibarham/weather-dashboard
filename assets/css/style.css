@@ -3,45 +3,68 @@
     margin: 0px;
     padding: 0;
     box-sizing: border-box;
-
+    color:black;
 }
 
+body {
+    background-image: url(../images/shutterstock_12274222.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 80%;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    
+}
 nav {
     display:flex;
     flex-wrap: wrap;
     position: -webkit-sticky;
     position: sticky;
     padding: 20px,35px;
-    background: linear-gradient(179.2deg, rgb(34, 34, 34) 0%, rgb(8, 0, 153) 29.7%, rgb(118, 6, 166) 63.4%, rgba(233, 0, 64, 0.58) 100.1%);
+    background-image: url(../images/shutterstock_12274222.jpg);
     align-content: center;
     justify-content: center;
     border-radius: 5px;
     padding-bottom: 30px;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 80%;
+    background-color: #007bff!important;
 }
 
 
 h1{
     padding:15px;
-    font-size: 30px;
-    font-weight: lighter;
-    color:white;
+    font-size: 40px;
+    color:black;
 }
 
+
 .mycard {
-    padding-top: 40px;
-    width:80%;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    /* width:30%; */
+    /* padding-right:30px; */
+    padding-left: 15px;
+
    
 
 }
 
 .card-header{
-    background: linear-gradient(179.2deg, rgb(34, 34, 34) 0%, rgb(8, 0, 153) 29.7%, rgb(118, 6, 166) 63.4%, rgba(233, 0, 64, 0.58) 100.1%);
+    box-sizing: border-box;
+   background-color: #007bff;
 }
 
 h3 {
-    color:white;
+   font-size: 15px;
     text-align: center;
-    font-weight: lighter;
+    
 }
 
 .city{
@@ -50,10 +73,40 @@ h3 {
 
 button {
     border-color:black!important;
-    color:white!important;
-    background: linear-gradient(179.2deg, rgb(34, 34, 34) 0%, rgb(8, 0, 153) 29.7%, rgb(118, 6, 166) 63.4%, rgba(233, 0, 64, 0.58) 100.1%)!important;
+    color:black !important;
+    background-color: #007bff!important;
 }
 
 button:hover {
-    background-color: aqua!important;
+    background-color: #ffffff!important;
 }
+
+.current-weather-container {
+    padding:15px;
+    flex-wrap: nowrap;
+    display: flex!important;
+    background-color: #ffffff;
+    /* border:solid 1px; */
+    border-color: grey;
+     padding-left:10px;
+     margin-left:10px;
+      width: 60%;
+     height: 50%;
+     margin:auto; 
+     border-radius: 20px;
+   
+}
+
+
+.city-title h2 {
+    
+    /* padding:30px; */
+}
+
+#current-city-name{
+    padding:20px;
+    margin: auto !important;;
+   font-size: 30px;
+   
+}
+

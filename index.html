@@ -20,36 +20,38 @@
 </header>
 
 <body>
-
-    <main class="flex-row justify-space-between">
+    <main>
+        <!-- card header -->
+        <!-- <div class="d-flex p-8" > -->
+        <!-- <div class="d-inline-flex p-2 justify-content-start"> -->
         <div class="mycard">
-            <div class="col-9 col-md-4">
-                <div class="card">
-                    <h3 class="card-header">City</h3>
-                    <form id="city-form" class="card-body">
-                        <input name="city" id="city-input" type="text" autofocus="true" class="form-input"
-                            placeholder="Enter city here" />
-                        <button type="submit" id="search-button" class="btn btn btn-outline-primary">Search</button>
-                    </form>
-
-
-
-
-                    <div class="col-12 col-md-8">
-                        <span class="current-weather-container" id="current-weather-container">
-
-                        </span>
+            <!-- <div class="col-4"> -->
+            <div class="card">
+                <h3 class="card-header">City</h3>
+                <form id="city-form" class="card-body">
+                    <input name="city" id="city-input" type="text" autofocus="true" class="form-input"
+                        placeholder="Enter city here" />
+                    <button type="submit" id="search-button" class="btn btn btn-outline-primary">Search</button>
+                </form>
+                <div>
                 </div>
+            </div>
+        </div>
 
 
 
-                <div class="col-12 col-md-8">
-                    <span id="current-date" class="current-date">
+        <div class="current-weather-container " id="current-weather-container">
+            <div class="main-weather city-title" id="main">
 
-                    </span>
+                <span id="currentDate"></span>
+                <h3 id="current-city-name"></h3>
+                <h3>Temperature: <span id="temperature">—</span>°F</h3>
+                <h3>Humidity: <span id="humidity">—</span>%</h3>
+                <h3>Wind-Speed: <span id="wind-speed">—</span>mph</h3>
+                <h3>Uv-Index: <span id="uv-index">—</span></h3>
 
-
-                </div>
+            </div>
+        </div>
     </main>
 
 
@@ -63,7 +65,7 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="./assets/js/script.js"></script>
-    
+
 
 
 
