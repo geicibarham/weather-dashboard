@@ -4,6 +4,7 @@
     padding: 0;
     box-sizing: border-box;
     color:black;
+    font-family: 'Source Code Pro', monospace;
 }
 
 body {
@@ -41,6 +42,7 @@ h1{
     padding:15px;
     font-size: 40px;
     color:black;
+  
 }
 
 
@@ -51,18 +53,20 @@ h1{
     /* width:30%; */
     /* padding-right:30px; */
     padding-left: 15px;
+    height:80%;
 
    
 
 }
 
 .card-header{
+   
     box-sizing: border-box;
    background-color: #007bff;
 }
 
 h3 {
-   font-size: 15px;
+    font-size: 18px;
     text-align: center;
     
 }
@@ -97,12 +101,6 @@ button:hover {
    
 }
 
-
-.city-title h2 {
-    
-    /* padding:30px; */
-}
-
 #current-city-name{
     padding:20px;
     margin: auto !important;;
@@ -110,3 +108,8 @@ button:hover {
    
 }
 
+#currentDate {
+padding:20px;
+text-align: center;
+margin:auto;
+}

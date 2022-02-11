@@ -1,3 +1,11 @@
+//things to do
+//01 - display icon
+//02 - change code - make copy of this one that I know works - 
+// 03 - make a fetch call for city name - return lat and long
+// 04 - send lat and long to another fetch that will bring uv index, and 7 days of forecast - maybe even change parameters to 5 days
+// 05 - create 5 dinamic cards that will display weather for 5 days
+// 05 - save local storage
+
 var formEl = document.querySelector("#city-form");
 var searchInput = document.querySelector("#city-input");
 var weatherContainerEl = document.querySelector("#current-weather-container");
@@ -9,16 +17,13 @@ var windspeed = document.querySelector("#wind-speed");
 var uvindex = document.querySelector("#uv-index");
 var locationIcon = document.querySelector(".weather-icon");
 var currentDate = document.querySelector("#currentDate");
+var currentIcon = document.querySelector("#currentIcon");
 
-//function to handle form submission
-var formSubmitHandler = function (event) {
-    //prevent browser from automatically refreshing
+// Global variables
+// displaying current date
+const date = moment().format("MMMM Do YYYY");
+var searchInput = $("#city-input").val();
 
-
-};
-
-
-//create function to get the current weather on a specific city - fetch will be in here
 
 var getCurrentWeather = function () {
     event.preventDefault();
@@ -30,45 +35,52 @@ var getCurrentWeather = function () {
 
 
     fetch(apiUrl)
+
         .then(function (response) {
+            console.log(response);
             response.json().then(function (data) {
-               
-
-                const date = moment().format("MMMM Do YYYY");
-              
-                
-                //grab data and display
-                // locationIcon.innerHTML = data.weather[0];
-                // currentDate.innerHTML = date;
-                currentDate.innerHTML = date;
-                currentcityname.innerHTML = data.name;
-                console.log(data.main);
-                temperature.innerHTML = data.main.temp;
-                humidity.innerHTML = data.main.humidity;
-                windspeed.innerHTML = data.wind.speed;
-
-
-                console.log(data.weather[0]);
-                // uvindex
-
-                //  let icon = $("<img>").addClass("rounded mx-auto d-block");
-                // icon.attr("src", "http://openweathermap.org/img/wn/" + today.weather[0].icon + "@2x.png");
+                // store lat and long
+                lat = data.coord.lat;
+                lon = data.coord.lon;
+                displayCurrentweather();
+                return lat + lon + searchInput;
 
             });
-        })
+        
+        });
 
 }
 
 var displayCurrentweather = function () {
+    
     //weather main
+    var ApiKey = 'ee601a5be4293bbbbc2b2665840ba595';
+    var apiUrl = "https://api.openweathermap.org/data/2.5/onecall?+lat=" + lat + "&long=" + lon + "&Appid=" + ApiKey +  "&exclude=hourly&units=imperial" ;
+
+
+    // https://api.openweathermap.org/data/2.5/onecall?lat=33.44&lon=-94.04&exclude=hourly,daily&appid={API key}
+    // https://api.openweathermap.org/data/2.5/onecall?lat=33.44&lon=-94.04https://api.openweathermap.org/data/2.5/onecall?lat=33.44&lon=-94.04&exclude=hourly,minutely,alerts&appid=ee601a5be4293bbbbc2b2665840ba595&appid=ee601a5be4293bbbbc2b2665840ba595
+// https://api.openweathermap.org/data/2.5/onecall?lat=33.44&lon=-94.04&exclude=hourly,minutely,alerts&appid=ee601a5be4293bbbbc2b2665840ba595
+
+
+    fetch(apiUrl)
+        .then(function (response) {
+            response.json().then(function (data) {
+                // store lat and long
+                lat = data.coord.lat;
+                lon = data.coord.lon;
+                displayCurrentweather();
+                return lat + lon + searchInput;
+               
+            });
+        });
 
 }
 
 
 formEl.addEventListener('submit', getCurrentWeather);
-
 searchButtonEl.addEventListener("click", getCurrentWeather);
-
-
+formEl.addEventListener('submit', displayCurrentweather);
+searchButtonEl.addEventListener("click", displayCurrentweather);
 
 // var getFivedaysWeather = function () {
