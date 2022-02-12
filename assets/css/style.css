@@ -5,10 +5,12 @@
     box-sizing: border-box;
     color:black;
     font-family: 'Source Code Pro', monospace;
+    
 }
 
 body {
-    background-image: url(../images/shutterstock_12274222.jpg);
+   
+    background: linear-gradient(89.7deg, rgb(0, 32, 95) 2.8%, rgb(132, 53, 142) 97.8%);
     background-size: cover;
     background-attachment: fixed;
     background-position: 80%;
@@ -16,8 +18,9 @@ body {
 
 main {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
     
 }
 nav {
@@ -26,7 +29,7 @@ nav {
     position: -webkit-sticky;
     position: sticky;
     padding: 20px,35px;
-    background-image: url(../images/shutterstock_12274222.jpg);
+    /* background-image: url(../images/shutterstock_12274222.jpg); */
     align-content: center;
     justify-content: center;
     border-radius: 5px;
@@ -34,14 +37,14 @@ nav {
     background-size: cover;
     background-attachment: fixed;
     background-position: 80%;
-    background-color: #007bff!important;
+    
 }
 
 
 h1{
     padding:15px;
     font-size: 40px;
-    color:black;
+    color:white;
   
 }
 
@@ -60,14 +63,16 @@ h1{
 }
 
 .card-header{
-   
+    color:white;
     box-sizing: border-box;
-   background-color: #007bff;
+    background: linear-gradient(109.6deg, rgb(9, 9, 121) 11.2%, rgb(144, 6, 161) 53.7%, rgb(0, 212, 255) 100.2%);
+    
 }
 
 h3 {
     font-size: 18px;
     text-align: center;
+    
     
 }
 
@@ -76,13 +81,14 @@ h3 {
 }
 
 button {
+    
+    color: white !important;
     border-color:black!important;
-    color:black !important;
-    background-color: #007bff!important;
+    background: linear-gradient(109.6deg, rgb(9, 9, 121) 11.2%, rgb(144, 6, 161) 53.7%, rgb(0, 212, 255) 100.2%)!important;
 }
 
 button:hover {
-    background-color: #ffffff!important;
+    background: linear-gradient(111.7deg, rgb(251, 198, 6) 2.4%, rgb(224, 82, 95) 28.3%, rgb(194, 78, 154) 46.2%, rgb(32, 173, 190) 79.4%, rgb(22, 158, 95) 100.2%)!important;
 }
 
 .current-weather-container {
@@ -90,17 +96,22 @@ button:hover {
     flex-wrap: nowrap;
     display: flex!important;
     background-color: #ffffff;
-    /* border:solid 1px; */
-    border-color: grey;
+     border:solid 3px;
+    border-color: turquoise;
      padding-left:10px;
      margin-left:10px;
-      width: 60%;
+      width: 40%;
      height: 50%;
-     margin:auto; 
+    align-self: center;
      border-radius: 20px;
+    margin:auto;
    
 }
 
+#city-input {
+    color: purple !important;
+    border-color: turquoise!important;
+}
 #current-city-name{
     padding:20px;
     margin: auto !important;;
@@ -113,3 +124,30 @@ padding:20px;
 text-align: center;
 margin:auto;
 }
+#uv-index {
+    border-radius: 5px;
+    padding: 3px;
+}
+
+.five-days-forecast {
+    
+    padding-top: 15px;
+    margin-top: 10px;
+    display:flex;
+    margin-left: 20px;
+    padding-right: 20px;
+    flex-wrap: wrap;
+    font-size: 13px;
+    /* align-items: center; */
+    justify-content: space-evenly;
+   
+}
+
+.card-1 ,.card-2, .card-3 , .card-4 , .card-5 {
+    padding: 15px;
+    background-color: #ffffff;
+    border:solid 3px;
+    border-color: turquoise;
+    border-radius: 20px;
+}
+
