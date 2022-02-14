@@ -13,6 +13,9 @@ Under "Search for a City," click into the search bar and type a city to search f
 Once a valid city has been searched for, its current and future weather conditions will be shown under current weather forecast.
 Under "Search history", will be up to five cities searched by the user. If no city has ben searched, "No history yet" will be shown.
 
+![alt-text](https://github.com/geicibarham/weather-dashboard/blob/main/assets/images/weather-png.png)
+
+
 ## Technologies Used
 
 * Javascript, HTML, CSS;
