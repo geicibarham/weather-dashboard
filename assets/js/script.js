@@ -105,15 +105,10 @@ var getCurrentWeather = function () {
 
                                 uvindex.style.backgroundColor = "red"
                             }
-
-                            var travelTime1 = moment().add(1, 'day').format('M/D/YYYY');
-
-
                             // populate each day 
-
+                            // day one
+                            var travelTime1 = moment().add(1, 'day').format('M/D/YYYY');
                             dateDayone.innerHTML = travelTime1;
-
-
                             iconOneEl.setAttribute("src", "https://openweathermap.org/img/wn/" + data.daily[1].weather[0].icon + "@2x.png")
                             dayOnetemperature.innerHTML = data.daily[1].temp.day + "°F";
                             dayOnetempmin.innerHTML = data.daily[1].temp.min + "°F";
@@ -121,22 +116,17 @@ var getCurrentWeather = function () {
                             dayOnewindSpeed.innerHTML = data.daily[1].wind_speed + " " + "Mph";
 
 
+                            // day two
                             var travelTime2 = moment().add(2, 'day').format('M/D/YYYY');
-
                             dateDaytwo.innerHTML = travelTime2;
-
-
                             iconTwoEl.setAttribute("src", "https://openweathermap.org/img/wn/" + data.daily[2].weather[0].icon + "@2x.png")
                             dayTwotemperature.innerHTML = data.daily[2].temp.day + "°F";
                             dayTwotempmin.innerHTML = data.daily[2].temp.min + "°F";
                             dayTwohumidity.innerHTML = data.daily[2].humidity + "%";
                             dayTwowindSpeed.innerHTML = data.daily[2].wind_speed + " " + "Mph";
 
-
-
+                            // day three
                             var travelTime3 = moment().add(3, 'day').format('M/D/YYYY');
-
-
                             iconthreeEl.setAttribute("src", "https://openweathermap.org/img/wn/" + data.daily[3].weather[0].icon + "@2x.png")
                             dateDaythree.innerHTML = travelTime3;
                             dayThreetemperature.innerHTML = data.daily[3].temp.day + "°F";
@@ -144,10 +134,8 @@ var getCurrentWeather = function () {
                             dayThreehumidity.innerHTML = data.daily[3].humidity + "%";
                             dayThreewindSpeed.innerHTML = data.daily[3].wind_speed + " " + "Mph";
 
-
-
+                            // day four
                             var travelTime4 = moment().add(4, 'day').format('M/D/YYYY');
-
                             dateDayfour.innerHTML = travelTime4;
                             iconFourEl.setAttribute("src", "https://openweathermap.org/img/wn/" + data.daily[4].weather[0].icon + "@2x.png")
                             dayFourtemperature.innerHTML = data.daily[4].temp.day + "°F";
@@ -155,9 +143,8 @@ var getCurrentWeather = function () {
                             dayFourhumidity.innerHTML = data.daily[4].humidity + "%";
                             dayFourwindSpeed.innerHTML = data.daily[4].wind_speed + " " + "Mph";
 
-
+                            // day five
                             var travelTime5 = moment().add(5, 'day').format('M/D/YYYY');
-
                             dateDayfive.innerHTML = travelTime5;
                             iconFiveEl.setAttribute("src", "https://openweathermap.org/img/wn/" + data.daily[5].weather[0].icon + "@2x.png")
                             dayFivetemperature.innerHTML = data.daily[5].temp.day + "°F";
@@ -168,8 +155,6 @@ var getCurrentWeather = function () {
                             saveToLocal(searchInput)
                         })
                     })
-
-
 
             });
         })
@@ -218,13 +203,8 @@ function renderHistory() {
 
     } else {
         for (i = 0; i < history.length; i++) {
-            // var link = document.createElement("a");
-            // var newButton = document.createElement("button");
-            // newButton.innerText = history[i];
-            // newButton.textContent = 
-            var newButton = document.createElement("a");
+           var newButton = document.createElement("button");
             newButton.innerText = history[i];
-            newButton.setAttribute("href", history[i].html_url);
             newButton.setAttribute("class", "general-button");
 
 
@@ -238,8 +218,4 @@ function renderHistory() {
 
 renderHistory();
 
-
 searchButtonEl.addEventListener("click", getCurrentWeather);
-
-
-
