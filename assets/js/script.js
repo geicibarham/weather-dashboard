@@ -218,17 +218,18 @@ function renderHistory() {
 
     } else {
         for (i = 0; i < history.length; i++) {
-            var link = document.createElement("a");
-            var newButton = document.createElement("button");
-            newButton.textContent = history[i];
-            link.setAttribute("href", history[i].html_url);
+            // var link = document.createElement("a");
+            // var newButton = document.createElement("button");
+            // newButton.innerText = history[i];
+            // newButton.textContent = 
+            var newButton = document.createElement("a");
+            newButton.innerText = history[i];
+            newButton.setAttribute("href", history[i].html_url);
             newButton.setAttribute("class", "general-button");
 
 
             historyEl.append(newButton);
-            newButton.append(link);
-
-
+            
             newButton.style.textTransform = "capitalize";
 
         }
