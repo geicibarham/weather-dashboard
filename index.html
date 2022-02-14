@@ -8,12 +8,12 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,300;0,400;1,300;1,600&display=swap" rel="stylesheet"> -->
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <title>Document</title>
+    <title>Weather Dashboard</title>
 </head>
 
 <header>
+
     <nav>
 
         <h1>Weather Dashboard</h1>
@@ -23,21 +23,33 @@
 </header>
 
 <body>
-    <main>
 
+    <main>
         <div class="mycard">
             <!-- <div class="col-4"> -->
             <div class="card">
-                <h3 class="card-header">City</h3>
+                <h3 class="card-header">Search for a city</h3>
                 <form id="city-form" class="card-body">
                     <input name="city" id="city-input" type="text" autofocus="true" class="form-input"
                         placeholder="Enter city here" />
-                    <button type="submit" id="search-button" class="btn btn btn-outline-primary">Search</button>
+                    <button type="submit" id="search-button" class="btn btn btn-outline-primary general-button">Search</button>
                 </form>
+
+                
+                    <div class="card">
+                        <h3 class="card-header">Search History</h3>
+                        <form id="city-form" class="card-body">
+                    <div class="searched-cities" id="cityArray">
+                        </div>
+                    </div>
+                </div>
                 <div>
                 </div>
             </div>
-        </div>
+
+
+        
+        
 
 
 
@@ -46,24 +58,34 @@
 
                 <span id="currentDate"></span>
                 <h3 id="current-city-name"></h3>
-                <!-- <h3 id="currentIcon"><img src="./assets/images/weather-placeholder.png" width="50" height="50"></h3> -->
+                <img id="weather-image" />
                 <h3>Temperature: <span id="temperature"></span></h3>
                 <h3>Humidity: <span id="humidity"></span></h3>
                 <h3>Wind-Speed: <span id="wind-speed"></span></h3>
                 <h3>Uv-Index: <span id="uv-index"></span></h3>
 
+
             </div>
         </div>
-        </div>
     </main>
+   
 
-
+    <div class="fivedayTitle">
+        <h3>Five Days forecast</h3>
+    </div>
     <div class="five-days-forecast" id="five-days-forecast">
+
 
         <div class="card-1">
             <div id="day1">
-                <h3>Temperature: <span id="temperature1"></span></h3>
-                <h3>Humidity: <span id="humidity1"></span></h3>
+
+                <h4> <span id="date1"></span></h4>
+                <img id="weather-image1" />
+                <h4><span id="temperature1"></span></h4>
+                <h4 class="min-temp"><span id="temperature1min"></span></h4>
+                <h4>Humidity: <span id="humidity1"></span></h4>
+                <h4>Wind-Speed: <span id="wind-speed1"></span></h4>
+
 
             </div>
         </div>
@@ -72,8 +94,13 @@
 
         <div class="card-2">
             <div id="day2">
-                <h3>Temperature: <span id="temperature2"></span></h3>
-                <h3>Humidity: <span id="humidity2"></span></h3>
+                <img id="weather-image2" />
+                <h4> <span id="date2"></span></h4>
+                <h4><span id="temperature2"></span></h4>
+                <h4 class="min-temp"><span id="temperature2min"></span></h4>
+                <h4>Humidity: <span id="humidity2"></span></h4>
+                <h4>Wind-Speed: <span id="wind-speed2"></span></h4>
+
 
             </div>
         </div>
@@ -82,35 +109,55 @@
 
         <div class="card-3">
             <div id="day3">
-                <h3>Temperature: <span id="temperature3"></span></h3>
-                <h3>Humidity: <span id="humidity3"></span></h3>
+
+                <h4> <span id="date3"></span></h4>
+                <img id="weather-image3" />
+                <h4><span id="temperature3"></span></h4>
+                <h4 class="min-temp"><span id="temperature3min"></span></h4>
+                <h4>Humidity: <span id="humidity3"></span></h4>
+                <h4>Wind-Speed: <span id="wind-speed3"></span></h4>
+
 
             </div>
         </div>
-
-
 
         <div class="card-4">
             <div id="day4">
-                <h3>Temperature: <span id="temperature4"></span></h3>
-                <h3>Humidity: <span id="humidity4"></span></h3>
+
+                <h4> <span id="date4"></span></h4>
+                <img id="weather-image4" />
+                <h4><span id="temperature4"></span></h4>
+                <h4 class="min-temp"><span id="temperature4min"></span></h4>
+                <h4>Humidity: <span id="humidity4"></span></h4>
+                <h4>Wind-Speed: <span id="wind-speed4"></span></h4>
+
 
             </div>
         </div>
 
-
-
-
         <div class="card-5">
             <div id="day5">
-                <h3>Temperature: <span id="temperature5"></span></h3>
-                <h3>Humidity: <span id="humidity5"></span></h3>
+                <h4> <span id="date5"></span></h4>
+                <img id="weather-image5" />
+                <h4><span id="temperature5"></span></h4>
+                <h4 class="min-temp"><span id="temperature5min"></span></h4>
+                <h4>Humidity: <span id="humidity5"></span></h4>
+                <h4>Wind-Speed: <span id="wind-speed5"></span></h4>
+
             </div>
         </div>
 
     </div>
 
 
+
+
+
+
+    <footer>
+
+
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
