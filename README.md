@@ -20,5 +20,5 @@ Under "Search history", will be up to five cities searched by the user. If no ci
 ## Credits
 
 * What would we do without https://www.w3schools.com/;
-* https://openweathermap.org/;
+* [Open Weather Map Api](https://openweathermap.org/;/).
 * https://developer.mozilla.org/en-US/;
